@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.arrow {
+  display: block;
+  height: 0;
+  width: 0;
+  border: 50px solid transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s ease-in;
+}
+
+.arrow.left {
+  border-right-color: white;
+}
+.arrow.left:active {
+  border-right-color: red;
+}
+
+.arrow.right {
+  border-left-color: white;
+}
+.arrow.right:active {
+  border-left-color: red;
+}
+
+.arrow.up {
+  border-bottom-color: white;
+}
+.arrow.up:active {
+  border-bottom-color: red;
+}
+
+.arrow.down {
+  border-top-color: white;
+}
+.arrow.down:active {
+  border-top-color: red;
+}
+
+.container {
+  background: black;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+input {
+  background: transparent;
+  position: relative;
+  border: 0;
+  border-bottom: 1px solid white;
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  display: block;
+  width: 150px;
+  height: 100px;
+  -webkit-touch-callout: none; /* iOS Safari */
+   -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Firefox */
+       -ms-user-select: none; /* Internet Explorer/Edge */
+           user-select: none; /* Non-prefixed version, currently
+                                 supported by Chrome and Opera */
+}
+
+.input {
+  width: 180px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.input.readonly .cover {
+  position: absolute;
+  display: block;
+  content: ' ';
+  width: 180px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 2;1
+}
+
+.readonly.input input{
+  border: transparent;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-direction: center;
+  justify-content: space-around;
+}
