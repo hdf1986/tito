@@ -24,9 +24,18 @@
     return id;
   }
 
+  const ACTIONS = {
+    'up': () => fetch('http://192.168.0.1/up'),
+    'down': () => fetch('http://192.168.0.1/stop'),
+    'left': () => fetch('http://192.168.0.1/left'),
+    'right': () => fetch('http://192.168.0.1/right')
+  }
+
   arrows.forEach(arrow => {
     arrow.addEventListener('click', e => {
       const direction = e.target.classList[e.target.classList.length - 1];
+
+      ACTIONS[direction]()
     })
   })
 
