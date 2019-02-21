@@ -25,10 +25,10 @@
   }
 
   const ACTIONS = {
-    'up': () => fetch('http://192.168.0.1/up'),
-    'down': () => fetch('http://192.168.0.1/stop'),
-    'left': () => fetch('http://192.168.0.1/left'),
-    'right': () => fetch('http://192.168.0.1/right')
+    'up': () => fetch('https://192.168.1.1/up'),
+    'down': () => fetch('https://192.168.1.1/stop'),
+    'left': () => fetch('https://192.168.1.1/left'),
+    'right': () => fetch('https://192.168.1.1/right')
   }
 
   arrows.forEach(arrow => {
